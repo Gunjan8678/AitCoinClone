@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		184EDCF727DF51B500BF4867 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 184EDCF627DF51B500BF4867 /* Fonts */; };
 		31EEA5C9A2BCA2CCBD63D095 /* libPods-AitCoinClone-AitCoinCloneTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC2F826C4BC2C304E1BDFCF /* libPods-AitCoinClone-AitCoinCloneTests.a */; };
 		76E0CAEA0DA8410FAB7116DA /* libPods-AitCoinClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828DA0B440729C8A486F5436 /* libPods-AitCoinClone.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AitCoinClone/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AitCoinClone/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AitCoinClone/main.m; sourceTree = "<group>"; };
+		184EDCF627DF51B500BF4867 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		737149F90558C63C6F422931 /* Pods-AitCoinClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AitCoinClone.release.xcconfig"; path = "Target Support Files/Pods-AitCoinClone/Pods-AitCoinClone.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AitCoinClone/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		828DA0B440729C8A486F5436 /* libPods-AitCoinClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AitCoinClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* AitCoinClone */ = {
 			isa = PBXGroup;
 			children = (
+				184EDCF627DF51B500BF4867 /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -114,7 +117,6 @@
 				08A628D70BB3561C5131E945 /* Pods-AitCoinClone-AitCoinCloneTests.debug.xcconfig */,
 				830FDAE8DAAF3AFE7B2AF93D /* Pods-AitCoinClone-AitCoinCloneTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184EDCF727DF51B500BF4867 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
