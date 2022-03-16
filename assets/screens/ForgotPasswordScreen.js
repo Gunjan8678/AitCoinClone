@@ -5,12 +5,13 @@ import {
   Image,
   Button,
   TextInput,
+  ScrollView,
   StyleSheet,
   Dimensions,
-  ScrollView,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
+import CustomButton from '../Buttons/CustomButton';
 
 const ForgotPasswordScreen = () => {
   return (
@@ -19,66 +20,73 @@ const ForgotPasswordScreen = () => {
         style={styles.bgImg}
         source={require('../images/star.jpg')}
         resizeMode="cover">
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Image style={styles.image} source={require('../images/AZY.png')} />
-        </View>
-        <View style={styles.logContainer}>
-          <Text
-            style={{
-              color: 'white',
-              fontWeight: 'bold',
-              fontSize: 20,
-            }}>
-            Forgot Password
-          </Text>
-          <View style={styles.input}>
-            <Text style={{color: 'white', fontSize: 15}}>
-              Enter your email for OTP
-            </Text>
-            <TextInput
-              style={{
-                backgroundColor: '#312e81',
-                borderRadius: 10,
-                height: 30,
-                color: 'white',
-                padding: 25,
-                marginTop: 10,
-                fontWeight: 'bold',
-              }}
-              placeholder="Enter Your Email"
-              placeholderTextColor="white"
-              keyboardType="numeric"
-            />
-          </View>
+        <ScrollView style={{width: '90%'}}>
           <View
             style={{
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start',
-              width: '90%',
+              // borderColor: '#fff',
+              // borderWidth: 1,
+              marginVertical: 40,
+              alignItems: 'center',
             }}>
-            <Button
-              title="Login Here"
-              type="clear"
-              titleStyle={{color: 'rgba(78, 116, 289, 1)'}}
+            <Image
+              style={styles.image}
+              source={require('../images/AZY.png')}
+              resizeMode="cover"
             />
           </View>
-          <TouchableOpacity>
-            <View
+
+          <View style={styles.logContainer}>
+            <Text
               style={{
-                backgroundColor: '#3b82f6',
-                width: Dimensions.get('window').width / 3,
-                paddingVertical: 10,
-                marginTop: 10,
-                borderRadius: 5,
-                justifyContent: 'center',
-                alignItems: 'center',
+                color: 'white',
+                fontWeight: 'bold',
+                fontSize: 20,
               }}>
-              <Text style={{color: 'white', fontWeight: 'bold'}}>
-                Send Password
+              Forgot Password
+            </Text>
+            <View style={styles.input}>
+              <Text style={{color: 'white', fontSize: 15}}>
+                Enter your email for OTP
               </Text>
+              <TextInput
+                style={{
+                  backgroundColor: '#312e81',
+                  borderRadius: 10,
+                  color: 'white',
+                  padding: 5,
+                  marginTop: 10,
+                  fontWeight: 'bold',
+                }}
+                placeholder="Enter Your Email"
+                // placeholderTextColor="white"
+                keyboardType="numeric"
+              />
             </View>
-          </TouchableOpacity>
-        </View>
+
+            <CustomButton>LOGIN HERE</CustomButton>
+
+            <TouchableOpacity>
+              <View
+                style={{
+                  backgroundColor: '#3b82f6',
+                  width: Dimensions.get('window').width / 3,
+                  paddingVertical: 10,
+                  marginTop: 10,
+                  borderRadius: 5,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontWeight: 'bold',
+                  }}>
+                  Send Password
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </ImageBackground>
     </View>
   );
@@ -92,26 +100,25 @@ const styles = StyleSheet.create({
   image: {
     // backgroundColor: '#ccc',
     margin: 20,
-    width: Dimensions.get('window').width / 2.6,
-    height: Dimensions.get('window').width / 2.6,
+    width: 130,
+    height: 130,
+    // width: Dimensions.get('window').width / 2,
+    // height: Dimensions.get('window').width / 2,
   },
   logContainer: {
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingVertical: 30,
-    margin: 20,
+    paddingVertical: 20,
+    marginVertical: 20,
     backgroundColor: 'black',
     opacity: 0.8,
     borderRadius: 20,
-    width: '85%',
-    // height: '50%',
+    width: '100%',
   },
   input: {
-    marginTop: 20,
+    marginVertical: 10,
     width: '90%',
-    paddingVertical: 20,
-    borderColor: 'black',
-    borderWidth: 2,
+    paddingVertical: 10,
     color: 'white',
   },
   btn: {

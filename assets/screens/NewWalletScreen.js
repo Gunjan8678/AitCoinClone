@@ -6,18 +6,20 @@ import {
   Button,
   TextInput,
   Dimensions,
+  SafeAreaView,
   StyleSheet,
   ScrollView,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
+import CustomButton from '../Buttons/CustomButton';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 const NewWalletScreen = () => {
   return (
-    <View style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <ImageBackground
         style={styles.bgImage}
         source={require('../images/star.jpg')}>
@@ -30,7 +32,8 @@ const NewWalletScreen = () => {
         >
           <Image
             style={{
-              marginTop: 40,
+              // marginTop: 60,
+              paddingTop: 20,
               justifyContent: 'center',
               alignItems: 'center',
               width: 130,
@@ -56,10 +59,7 @@ const NewWalletScreen = () => {
                 <Icon name="user" size={20} color="#fff" />
 
                 <TextInput
-                  style={{
-                    width: '90%',
-                    padding: 20,
-                  }}
+                  style={styles.textInput}
                   placeholderTextColor="white"
                   placeholder="Referral ID"
                 />
@@ -68,10 +68,7 @@ const NewWalletScreen = () => {
                 <Ionicon name="mail" size={20} color="#fff" />
 
                 <TextInput
-                  style={{
-                    width: '90%',
-                    padding: 20,
-                  }}
+                  style={styles.textInput}
                   placeholderTextColor="white"
                   placeholder="Email ID"
                 />
@@ -80,10 +77,7 @@ const NewWalletScreen = () => {
                 <Ionicon name="key" size={20} color="#fff" />
 
                 <TextInput
-                  style={{
-                    width: '90%',
-                    padding: 20,
-                  }}
+                  style={styles.textInput}
                   color="white"
                   secureTextEntry={true}
                   placeholderTextColor="white"
@@ -94,7 +88,8 @@ const NewWalletScreen = () => {
                 <Entypo name="lock" size={20} color="#fff" />
 
                 <TextInput
-                  style={{width: '90%', padding: 20}}
+                  style={styles.textInput}
+                  secureTextEntry={true}
                   placeholderTextColor="white"
                   placeholder=" ***** "
                 />
@@ -103,36 +98,21 @@ const NewWalletScreen = () => {
                 <Entypo name="user" size={20} color="#fff" />
 
                 <TextInput
-                  style={{width: '90%', padding: 20}}
+                  style={styles.textInput}
                   placeholderTextColor="white"
                   placeholder="Full Name"
                 />
               </View>
               <View style={styles.inputContainer}>
                 <TextInput
-                  style={{fontSize: 20}}
+                  style={{fontSize: 18}}
                   placeholderTextColor="white"
                   placeholder=" AFGANISTAN "
                 />
               </View>
             </View>
-            <View
-              style={{
-                width: '100%',
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'flex-start',
-              }}>
-              <Button
-                title="Already have a wallet? Login"
-                type="clear"
-                titleStyle={{color: 'white', fontSize: 8}}
-                // buttonStyle={{
-                //   backgroundColor: 'white',
-                //   borderWidth: 2,
-                //   borderRadius: 60,
-                // }}
-              />
+            <View style={{width: '100%'}}>
+              <CustomButton>LOGIN HERE</CustomButton>
             </View>
 
             <TouchableOpacity>
@@ -153,7 +133,7 @@ const NewWalletScreen = () => {
           </View>
         </ScrollView>
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -162,6 +142,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    // color: '#022266',
   },
   container: {
     backgroundColor: 'black',
@@ -170,8 +151,7 @@ const styles = StyleSheet.create({
     width: '95%',
     // justifyContent: 'center',
     alignItems: 'center',
-    height: Dimensions.get('window').width / 0.7,
-    marginVertical: 10,
+    marginVertical: 20,
     paddingTop: 20,
     paddingHorizontal: 30,
   },
@@ -183,8 +163,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: 5,
     width: '100%',
-    height: 40,
   },
+  textInput: {width: '90%', padding: 5},
 });
 
 export default NewWalletScreen;
